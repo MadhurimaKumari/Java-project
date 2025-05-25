@@ -1,13 +1,13 @@
 # Java-project
 A Java Swing-based task management application that stores tasks in a MySQL database, featuring:
 
-Add, edit, and delete tasks
+->Add, edit, and delete tasks
 
-Mark tasks as complete/incomplete
+->Mark tasks as complete/incomplete
 
-Set and update deadlines
+->Set and update deadlines
 
-Persistent storage with MySQL
+->Persistent storage with MySQL
 
 
 
@@ -25,8 +25,9 @@ MySQL Connector/J (included)
 
 
 
-Software Setup
-Install Java:
+->Software Setup
+
+->Install Java:
 
 Download from Oracle JDK
 
@@ -34,7 +35,7 @@ Verify installation: java -version
 
 
 
-Install MySQL:
+->Install MySQL:
 
 Download from MySQL Community Server
 
