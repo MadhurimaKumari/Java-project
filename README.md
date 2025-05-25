@@ -1,0 +1,123 @@
+# Java-project
+A Java Swing-based task management application that stores tasks in a MySQL database, featuring:
+
+Add, edit, and delete tasks
+Mark tasks as complete/incomplete
+Set and update deadlines
+Persistent storage with MySQL
+
+
+🛠️ Prerequisites
+
+System Requirements
+Java JDK 8 or later
+MySQL Server 5.7 or later
+MySQL Connector/J (included)
+
+Software Setup
+Install Java:
+Download from Oracle JDK
+Verify installation: java -version
+
+Install MySQL:
+Download from MySQL Community Server
+Set root password during installation
+
+🚀 Installation & Setup
+
+1. Database Configuration
+##sql
+CREATE DATABASE todolist_db;
+USE todolist_db;
+
+CREATE TABLE tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    description VARCHAR(255) NOT NULL,
+    is_complete BOOLEAN DEFAULT FALSE,
+    deadline DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+2. Application Setup
+Clone the repository:
+
+##bash
+git clone https://github.com/yourusername/todo-list-app.git
+cd todo-list-app
+Configure database connection in TodoListApp.java:
+
+java
+private static final String DB_URL = "jdbc:mysql://localhost:3306/todolist_db";
+private static final String DB_USER = "your_username";
+private static final String DB_PASSWORD = "your_password";
+Add MySQL Connector/J to classpath:
+
+bash
+javac -cp .:lib/mysql-connector-java-8.0.xx.jar TodoListApp.java
+
+
+▶️ Running the Application
+Windows
+cmd
+java -cp .;lib/mysql-connector-java-8.0.xx.jar TodoListApp
+Linux/Mac
+bash
+java -cp .:lib/mysql-connector-java-8.0.xx.jar TodoListApp
+
+
+
+🖥️ Application Walkthrough
+Main Interface:
+
+*Task list displayed in table format
+
+*Input fields for new tasks
+
+*Action buttons for task management
+
+*Adding a Task:
+
+*Enter description
+
+*Set deadline (YYYY-MM-DD)
+
+*Click "Add Task"
+
+
+##Managing Tasks:
+
+✅ Toggle completion status
+
+📅 Update deadlines
+
+❌ Delete tasks
+
+🔄 Refresh task list
+
+
+
+🔧 Troubleshooting
+Issue	Solution
+Database connection failed	Verify MySQL service is running and credentials are correct
+ClassNotFoundException	Ensure MySQL Connector/J is in lib folder
+Date format errors	Use YYYY-MM-DD format only
+Table not found	Run the database setup script
+
+
+📂 Project Structure
+todo-list-app/
+├── src/
+│   └── TodoListApp.java       # Main application file
+├── lib/
+│   └── mysql-connector-java-8.0.xx.jar  # Database driver
+├── database/
+│   └── setup.sql              # Database schema
+└── README.md
+
+
+📬 Contact
+For support or questions:
+📧 kumarimadhurima785@gmail.com
+🌐 
+
