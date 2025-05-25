@@ -46,7 +46,6 @@ Set root password during installation
 
 1. Database Configuration
 
-2. 
 ##sql
 CREATE DATABASE todolist_db;
 USE todolist_db;
@@ -71,16 +70,22 @@ CREATE TABLE tasks (
 
 ▶️ Running the Application
 Windows
-cmd
-java -cp .;lib/mysql-connector-java-8.0.xx.jar TodoListApp
-Linux/Mac
+
+->cmd
+
+->java -cp .;lib/mysql-connector-java-8.0.xx.jar TodoListApp
+
+->Linux/Mac
+
 bash
-java -cp .:lib/mysql-connector-java-8.0.xx.jar TodoListApp
+
+->java -cp .:lib/mysql-connector-java-8.0.xx.jar TodoListApp
 
 
 
 🖥️ Application Walkthrough
-Main Interface:
+
+->Main Interface:
 
 *Task list displayed in table format
 
@@ -125,18 +130,28 @@ Table not found	-  Run the database setup script
 
 
 📂 Project Structure
+
 todo-list-app/
+
 ├── src/
+
 │   └── TodoListApp.java       # Main application file
+
 ├── lib/
+
 │   └── mysql-connector-java-8.0.xx.jar  # Database driver
+
 ├── database/
+
 │   └── setup.sql              # Database schema
+
 └── README.md
 
 
 
+
 📬 Contact
+
 For support or questions:
 
 📧 kumarimadhurima785@gmail.com
