@@ -43,19 +43,9 @@ CREATE TABLE tasks (
 Clone the repository:
 
 ##bash
-git clone https://github.com/yourusername/todo-list-app.git
+git clone https://github.com/MadhurimaKumari/todo-list-app.git
 cd todo-list-app
 Configure database connection in TodoListApp.java:
-
-java
-private static final String DB_URL = "jdbc:mysql://localhost:3306/todolist_db";
-private static final String DB_USER = "your_username";
-private static final String DB_PASSWORD = "your_password";
-Add MySQL Connector/J to classpath:
-
-bash
-javac -cp .:lib/mysql-connector-java-8.0.xx.jar TodoListApp.java
-
 
 ▶️ Running the Application
 Windows
