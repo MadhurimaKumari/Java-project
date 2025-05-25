@@ -10,6 +10,8 @@ Set and update deadlines
 Persistent storage with MySQL
 
 
+
+
 🛠️ Prerequisites
 
 System Requirements
@@ -21,38 +23,51 @@ MySQL Server 5.7 or later
 MySQL Connector/J (included)
 
 
+
+
 Software Setup
 Install Java:
+
 Download from Oracle JDK
+
 Verify installation: java -version
 
+
+
 Install MySQL:
+
 Download from MySQL Community Server
+
 Set root password during installation
+
+
 
 🚀 Installation & Setup
 
 1. Database Configuration
+
+2. 
 ##sql
 CREATE DATABASE todolist_db;
 USE todolist_db;
 
 CREATE TABLE tasks (
+
     id INT AUTO_INCREMENT PRIMARY KEY,
+    
     description VARCHAR(255) NOT NULL,
+    
     is_complete BOOLEAN DEFAULT FALSE,
+    
     deadline DATE,
+    
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    
 );
 
 
-2. Application Setup
-Clone the repository:
 
-##bash
-git clone https://github.com/MadhurimaKumari/Java-project.git
-cd todo-list-app
-Configure database connection in TodoListApp.java:
+2. Application Setup
 
 ▶️ Running the Application
 Windows
@@ -68,28 +83,44 @@ java -cp .:lib/mysql-connector-java-8.0.xx.jar TodoListApp
 Main Interface:
 
 *Task list displayed in table format
+
 *Input fields for new tasks
+
 *Action buttons for task management
+
 *Adding a Task:
+
 *Enter description
+
 *Set deadline (YYYY-MM-DD)
+
 *Click "Add Task"
+
 
 
 Managing Tasks:
 
 ✅ Toggle completion status
+
 📅 Update deadlines
+
 ❌ Delete tasks
+
 🔄 Refresh task list
 
 
 
+
 🔧 Troubleshooting
-Issue	Solution
+
+Issue	-  Solution
+
 Database connection failed  -  Verify MySQL service is running and credentials are correct
+
 ClassNotFoundException	-  Ensure MySQL Connector/J is in lib folder
+
 Date format errors	-  Use YYYY-MM-DD format only
+
 Table not found	-  Run the database setup script
 
 
@@ -104,9 +135,12 @@ todo-list-app/
 └── README.md
 
 
+
 📬 Contact
 For support or questions:
+
 📧 kumarimadhurima785@gmail.com
+
 🌐 https://github.com/MadhurimaKumari/Java-project
 
 
